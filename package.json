@@ -38,7 +38,8 @@
     "cordova-plugin-statusbar",
     "ionic-plugin-keyboard",
     "cordova-plugin-device",
-    "cordova-plugin-splashscreen"
+    "cordova-plugin-splashscreen",
+    "cordova-plugin-stepcounter"
   ],
   "cordovaPlatforms": [],
   "description": "fa: An Ionic project"

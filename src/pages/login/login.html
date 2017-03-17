@@ -1,0 +1,39 @@
+<ion-header>
+  <!--<ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Page One</ion-title>
+  </ion-navbar>-->
+</ion-header>
+
+<ion-content padding>
+    <div class="row">
+          <div style="margin-top:40vh;margin-left: 20vw" class="col-xs-12">
+              <span style="color:#000;border:0px;margin: 0px" class="input-label"></span>
+              <input style="border: 0px;border-top:0px;border-left:0px;border-right:0px;border-bottom:1px solid #e3e3e3" type="text" placeholder="Username" ng-model="loginData.username">
+          </div>
+    </div>
+
+    <div class="row">
+      <div style="margin-top:10vh;margin-left: 20vw" class="col-xs-12">
+                <span style="color:#000;border:0px;margin: 0px" class="input-label"></span>
+                <input style="border: 0px;border-top:0px;border-left:0px;border-right:0px;border-bottom:1px solid #e3e3e3" type="password" placeholder="Password" ng-model="loginData.password">
+        </div>
+    </div>
+
+    <div class="row">
+      <div style="margin-top:5vh;border:0px;margin-left: 20vw" class="col-xs-8">
+        <!-- <a href="#/app/activity" class="btn btn-success btn-block" role="button">Login</a> -->
+        <button type="submit" class="btn btn-success btn-block" role="button" style='background-color: #28a54c !important' >
+        Sign in
+        </button>
+        <!-- <input type="submit" value="→ Login" /> -->
+
+        <p>
+          <u><a style="color: #000 !important;margin-left: 5vw"  href="#/app/name">Not a user? Sign Up</a></u>  
+        </p>
+        </div>
+    </div>
+
+</ion-content>
