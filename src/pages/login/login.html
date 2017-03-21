@@ -8,17 +8,18 @@
 </ion-header>
 
 <ion-content class="background">
+  <form ng-submit="login(loginData)">
     <div class="row">
           <div style="margin-top:40vh;margin-left: 20vw" class="col-xs-12">
               <span style="color:#000;border:0px;margin: 0px;width:80%" class="input-label"></span>
-              <input style="border: 0px;border-top:0px;border-left:0px;border-right:0px;border-bottom:1px solid #e3e3e3;font-size:12px !important;width:75%" type="text" placeholder="Username" ng-model="loginData.username">
+              <input class="input-field"style="margin-left:0vw !important;width:75% !important"  type="text" placeholder="Username" ng-model="loginData.username">
           </div>
     </div>
 
     <div class="row">
       <div style="margin-top:10vh;margin-left: 20vw" class="col-xs-12">
                 <span style="color:#000;border:0px;margin: 0px;" class="input-label"></span>
-                <input style="border: 0px;border-top:0px;border-left:0px;border-right:0px;border-bottom:1px solid #e3e3e3;font-size:12px !important;width:75%" type="password" placeholder="Password" ng-model="loginData.password">
+                <input  class="input-field"style="margin-left:0vw !important;width:75% !important" type="password" placeholder="Password" ng-model="loginData.password">
         </div>
     </div>
 
@@ -31,8 +32,9 @@
           <!-- <input type="submit" value="→ Login" /> -->
 
           <p>
-            <u><a style="color: #000 !important;margin-left: 15vw;font-size:12px !important"  href="../name/name.html">Not a user? Sign Up</a></u>  
+            <u><a style="color: #000 !important;margin-left: 15vw;font-size:12px !important">Not a user? Sign Up</a></u>  
           </p>
       </div>
     </div>
+  </form>
 </ion-content>
