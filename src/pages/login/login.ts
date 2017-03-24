@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
-import { Router, ActivatedRoute } from '@angular/router';
+// import { Router, ActivatedRoute } from '@angular/router';
 import { Stepcounter } from 'ionic-native';
 import {Activity} from '../activity/activity';
 import {Http, Headers} from '@angular/http';
@@ -21,7 +21,7 @@ export class Login {
   constructor(public navCtrl: NavController, public http:Http,) {
   }
 
-    
+
   login(){
     let loginData = "username=" + this.loginData.username + " &password=" + this.loginData.password;
     // this.storage.set('username', this.loginData.username);
@@ -33,8 +33,8 @@ export class Login {
 
     .subscribe((result)=> {
           console.log(result)
-          // this.storage.set('user', result.data.data);
-          // this.storage.set.token = result.data.data.token;
+         //  this.storage.set('user', result.data.data);
+         //  this.storage.set.token = result.data.data.token;
           setTimeout(()=> {
             this.navCtrl.setRoot(Activity);
          }, 100);

@@ -7,9 +7,9 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
     <div class="row">
-        <div style="margin-left: 25vw" class="col-xs-12">
+        <div style="margin-left: 25vw" class="col-xs-8">
             <div class="timer-circle">
                 <!--<h1 style="text-align: center;padding-top:11vh;vertical-align:middle;color:#fff !important"></h1>-->
                 <!--             {{cal()}} -->
@@ -25,18 +25,20 @@
             </div>
          </div> -->
 
-    <div class="col-xs-4">
-        <!--<a class="action-button" role="button" (click)="start()"><ion-icon name="play"></ion-icon>&nbsp; Start</a>-->
-        <button ion-button round outline class="action-button"><ion-icon name="play"></ion-icon>&nbsp; Start</button>
-    </div>
+         <div class="col-xs-12">
+                  <div class="col-xs-8">
+                          <!--<a class="action-button" role="button" (click)="start()"><ion-icon name="play"></ion-icon>&nbsp; Start</a>-->
+                          <button ion-button round outline class="action-button"><ion-icon name="play"></ion-icon>&nbsp; Start</button>
+                      <!-- </div> -->
 
-    <div class="col-xs-4">
-        <button ion-button round outline class="action-button"><ion-icon name="pause"></ion-icon>&nbsp; Pause</button>
-        <!--<a style="margin-top:0vh" class="btn btn-info btn-block" role="button" (click)="pause()"><ion-icon name="pause"></ion-icon>&nbsp; Pause</a>-->
-    </div>
+                      <!-- <div class="col-xs-4"> -->
+                          <button ion-button round outline class="action-button"><ion-icon name="pause"></ion-icon>&nbsp; Pause</button>
+                          <!--<a style="margin-top:0vh" class="btn btn-info btn-block" role="button" (click)="pause()"><ion-icon name="pause"></ion-icon>&nbsp; Pause</a>-->
+                      <!-- </div> -->
 
-    <div class="col-xs-4">
-        <button ion-button round outline class="action-button"><ion-icon name="square"></ion-icon>&nbsp; Stop</button>
-        <!--<a class="btn btn-danger btn-block" role="button" (click)="stop()"><ion-icon name="stop"></ion-icon>&nbsp; Stop</a>-->
-    </div>
+                      <!-- <div class="col-xs-4"> -->
+                          <button ion-button round outline class="action-button"><ion-icon name="square"></ion-icon>&nbsp; Stop</button>
+                          <!--<a class="btn btn-danger btn-block" role="button" (click)="stop()"><ion-icon name="stop"></ion-icon>&nbsp; Stop</a>-->
+                  </div>
+         </div>
 </ion-content>

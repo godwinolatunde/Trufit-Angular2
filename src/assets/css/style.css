@@ -16,3 +16,32 @@
   width:106px;
   border-radius:100px;
 }
+.timer-circle{
+background-color: #efb223;
+width: 200px;
+height: 200px;
+border-radius: 100px;
+margin-top: 20vh;
+margin-left: : -20vw;
+}
+.toolbar-title-md{
+font-weight: normal !important;
+font-size: 18px !important;
+}
+.item-md {
+    font-size: 14px !important;
+    font-weight:400 !important;
+    color: #021c48 !important;
+}
+.button-outline-md{
+margin-left: 3vw !important;
+}
+.fixed-content-green{
+background-color: #42B546
+}
+.label-md[stacked]{
+font-size: 12px !important;
+}
+.content-md{
+color:#fff;
+}

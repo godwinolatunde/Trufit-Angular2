@@ -11,14 +11,18 @@
     <div class="row">
         <div style="margin-top:40vh;margin-left: 20vw" class="col-xs-12">
             <span style="color:#000;border:0px;margin: 0px;width:80%" class="input-label"></span>
-            <ion-input class="input-field" style="margin-left:0vw !important;width:75% !important" type="text" placeholder="Username" [(ngModel)]="loginData.username"></ion-input>
+            <!-- <ion-input class="input-field" style="margin-left:0vw !important;width:75% !important" type="text" placeholder="Username" [(ngModel)]="loginData.username"></ion-input> -->
+            <ion-label color="primary" stacked>Username</ion-label>
+              <ion-input type="text" placeholder="Username"></ion-input>
         </div>
     </div>
 
     <div class="row">
         <div style="margin-top:10vh;margin-left: 20vw" class="col-xs-12">
             <span style="color:#000;border:0px;margin: 0px;" class="input-label"></span>
-            <ion-input class="input-field" style="margin-left:0vw !important;width:75% !important" type="password" placeholder="Password" [(ngmodel)]="loginData.password"></ion-input>
+            <!-- <ion-input class="input-field" style="margin-left:0vw !important;width:75% !important" type="password" placeholder="Password" [(ngmodel)]="loginData.password"></ion-input> -->
+            <ion-label color="primary" stacked>Password</ion-label>
+              <ion-input type="text" placeholder="Password"></ion-input>
         </div>
     </div>
 
