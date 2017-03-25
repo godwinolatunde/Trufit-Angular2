@@ -3,18 +3,18 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 // import { IonicStorageModule } from '@ionic/storage';
 import {FormsModule} from '@angular/forms';
 import { MyApp } from './app.component';
+import { Register } from '../pages/register/register';
 import { Activity } from '../pages/activity/activity';
 import { Overview } from '../pages/overview/overview';
 import { Login } from '../pages/login/login';
-import { Name } from '../pages/name/name';
 
 @NgModule({
   declarations: [
     MyApp,
     Activity,
+    Register,
     Overview,
-    Login,
-    Name
+    Login
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -25,9 +25,9 @@ import { Name } from '../pages/name/name';
   entryComponents: [
     MyApp,
     Activity,
+    Register,
     Overview,
-    Login,
-    Name
+    Login
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

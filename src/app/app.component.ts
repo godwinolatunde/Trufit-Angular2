@@ -5,7 +5,7 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 import { Activity } from '../pages/activity/activity';
 import { Overview } from '../pages/overview/overview';
 import { Login } from '../pages/login/login';
-import { Name } from '../pages/name/name';
+import { Register } from '../pages/register/register';
 
 
 @Component({
@@ -26,7 +26,7 @@ export class MyApp {
       { title: 'Activity', component: Activity },
       { title: 'Overview', component: Overview },
       { title: 'Login', component: Login },
-      { title: 'Name', component: Name }
+      { title: 'Register', component: Register }
     ];
 
   }

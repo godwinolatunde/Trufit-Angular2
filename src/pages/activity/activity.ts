@@ -11,37 +11,36 @@ export class Activity {
   constructor(public navCtrl: NavController) {
   }
 
-  var start;
+  start;
   status = 'start';
 
   convertToTime(time){
-    ngIf(time.second == 60){
+    if(time.second == 60){
       time.minute++;
       time.second = 0;
     }
   }
 
-  start(){
-    start++;
+ private play(){
+    this.start++;
     status = 'start'
-    if(start == 1){
-      setInterval(){
+    if(this.start == 1){
+      setInterval(()=>{
         if(status == 'start'){
-          convertToTime(timed);
-          apply(){
-            timed.second++;
-          };
+          this.convertToTime(this.timed);
         }
       }, 1000);
     }
-  };
-
+  }
+  apply(){
+   this.timed.second++;
+   }
   pause(){
     status = 'pause';
-  };
+  }
 
   stop(){
     status = 'stop';
-    timed = {'minute':0,'second':0};
+    this.timed = {'minute':0,'second':0};
   }
 }

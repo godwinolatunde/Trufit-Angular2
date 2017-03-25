@@ -4,7 +4,7 @@ import { NavController } from 'ionic-angular';
 // import { Router, ActivatedRoute } from '@angular/router';
 import { Stepcounter } from 'ionic-native';
 import {Activity} from '../activity/activity';
-import {Name} from '../pages/name/name';
+import {Register} from '../pages/register/register';
 import {Http, Headers} from '@angular/http';
 // import {Storage} from '@ionic/storage';
 
@@ -45,7 +45,7 @@ export class Login {
          }
          register(){
                   // setTimeout(()=> {
-                  this.navCtrl.setRoot(Name);
+                  this.navCtrl.setRoot(Register);
                   // }, 100);
                   console.log()
          }
