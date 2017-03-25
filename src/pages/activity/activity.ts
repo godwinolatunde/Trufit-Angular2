@@ -7,52 +7,41 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'activity.html'
 })
 export class Activity {
-
+         timed = {'minute':0,'second':0};
   constructor(public navCtrl: NavController) {
-    function activityCtrl($log, $http, $localStorage, $window){
-    console.log($localStorage);
-    var timed;
-    var pause;
-    var stop;
-    var apply;
+  }
 
-  
-  timed = {'minute':0,'second':0};
   var start;
   status = 'start';
 
-  function convertToTime(time){
-    if(time.second == 60){
+  convertToTime(time){
+    ngIf(time.second == 60){
       time.minute++;
       time.second = 0;
     }
   }
 
-  start = function(){
+  start(){
     start++;
     status = 'start'
     if(start == 1){
-      setInterval(function(){
+      setInterval(){
         if(status == 'start'){
           convertToTime(timed);
-          apply(function(){
+          apply(){
             timed.second++;
-          });
+          };
         }
       }, 1000);
     }
-  }
+  };
 
-  pause = function(){
+  pause(){
     status = 'pause';
-  }
+  };
 
-  stop = function(){
+  stop(){
     status = 'stop';
     timed = {'minute':0,'second':0};
   }
-    
-  }
-
-}
 }

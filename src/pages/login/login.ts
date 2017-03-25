@@ -43,10 +43,10 @@ export class Login {
                   });
 
          }
-         // next(){
-         //          setTimeout(()=> {
-         //                   this.navCtrl.setPages(Name);
-         //          }, 100);
-         //          console.log()
-         // }
+         register(){
+                  // setTimeout(()=> {
+                  this.navCtrl.setRoot(Name);
+                  // }, 100);
+                  console.log()
+         }
 }
