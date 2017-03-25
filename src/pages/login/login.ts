@@ -4,6 +4,7 @@ import { NavController } from 'ionic-angular';
 // import { Router, ActivatedRoute } from '@angular/router';
 import { Stepcounter } from 'ionic-native';
 import {Activity} from '../activity/activity';
+import {Name} from '../pages/name/name';
 import {Http, Headers} from '@angular/http';
 // import {Storage} from '@ionic/storage';
 
@@ -13,33 +14,39 @@ Stepcounter.start(startingOffset).then(onSuccess => console.log('stepcounter-sta
 Stepcounter.getHistory().then(historyObj => console.log('stepcounter-history success', historyObj), onFailure => console.log('stepcounter-history error', onFailure));
 
 @Component({
-  selector: 'page-login',
-  templateUrl: 'login.html'
+         selector: 'page-login',
+         templateUrl: 'login.html'
 })
 export class Login {
-  loginData:{username:string, password:string};
-  constructor(public navCtrl: NavController, public http:Http,) {
-  }
+         loginData:{username:string, password:string};
+         constructor(public navCtrl: NavController, public http:Http,) {
+         }
 
 
-  login(){
-    let loginData = "username=" + this.loginData.username + " &password=" + this.loginData.password;
-    // this.storage.set('username', this.loginData.username);
-    this.loginData.username="";
-    this.loginData.password="";
-    let headers = new Headers();
-    headers.append('Content-Type','application/x-www-form-urlencoded; charset=UTF-8')
-    this.http.post('http://localhost/apis/login.php', this.loginData, {headers:headers} )
+         login(){
+                  let loginData = "username=" + this.loginData.username + " &password=" + this.loginData.password;
+                  // this.storage.set('username', this.loginData.username);
+                  this.loginData.username="";
+                  this.loginData.password="";
+                  let headers = new Headers();
+                  headers.append('Content-Type','application/x-www-form-urlencoded; charset=UTF-8')
+                  this.http.post('http://localhost/apis/login.php', this.loginData, {headers:headers} )
 
-    .subscribe((result)=> {
-          console.log(result)
-         //  this.storage.set('user', result.data.data);
-         //  this.storage.set.token = result.data.data.token;
-          setTimeout(()=> {
-            this.navCtrl.setRoot(Activity);
-         }, 100);
-         console.log()
-    });
+                  .subscribe((result)=> {
+                           console.log(result)
+                           //  this.storage.set('user', result.data.data);
+                           //  this.storage.set.token = result.data.data.token;
+                           setTimeout(()=> {
+                           this.navCtrl.setRoot(Activity);
+                           }, 100);
+                           console.log()
+                  });
 
-  }
+         }
+         // next(){
+         //          setTimeout(()=> {
+         //                   this.navCtrl.setPages(Name);
+         //          }, 100);
+         //          console.log()
+         // }
 }

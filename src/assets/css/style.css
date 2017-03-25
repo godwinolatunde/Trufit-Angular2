@@ -33,15 +33,24 @@ font-size: 18px !important;
     font-weight:400 !important;
     color: #021c48 !important;
 }
-.button-outline-md{
-margin-left: 3vw !important;
+.scroll-content{
+/*background-color: cadetblue;*/
+overflow-x:initial !important;
+overflow-y:initial !important;
 }
-.fixed-content-green{
-background-color: #42B546
+.swiper-scrollbar{
+display: none;
 }
-.label-md[stacked]{
-font-size: 12px !important;
+.next-button{
+padding: 0 4.6rem !important;
+border-radius: 8px !important;
+border-color: #072d42 !important;
+color: #333 !important;
+margin-left: 55vw;
 }
-.content-md{
-color:#fff;
+.back-button{
+padding: 0 4.6rem !important;
+border-radius: 8px !important;
+border-color: #072d42 !important;
+color: #333 !important;
 }
