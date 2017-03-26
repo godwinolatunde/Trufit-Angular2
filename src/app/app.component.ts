@@ -14,7 +14,7 @@ import { Register } from '../pages/register/register';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = Activity;
+  rootPage: any = Login;
 
   pages: Array<{title: string, component: any}>;
 
@@ -25,8 +25,8 @@ export class MyApp {
     this.pages = [
       { title: 'Activity', component: Activity },
       { title: 'Overview', component: Overview },
-      { title: 'Login', component: Login },
-      { title: 'Register', component: Register }
+      // { title: 'Login', component: Login },
+      // { title: 'Register', component: Register }
     ];
 
   }
