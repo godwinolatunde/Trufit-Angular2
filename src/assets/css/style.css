@@ -1,0 +1,56 @@
+/* Empty. Add your own CSS if you like */
+.sidemenu-head{
+  text-align: left;
+  border-bottom: 2px solid #ddd!important;
+	background:  url("../img/RealMadrid.png") rgba(0,0,0,1.0);
+	background-size: cover;
+}
+.overlay{
+	padding:15px;
+	background-color: rgba(255, 255, 255, 0.5);
+	height: 100%;
+}
+.image-holder{
+  border:3px solid #fff;
+  height:106px;
+  width:106px;
+  border-radius:100px;
+}
+.timer-circle{
+background-color: #efb223;
+width: 200px;
+height: 200px;
+border-radius: 100px;
+margin-top: 20vh;
+margin-left: : -20vw;
+}
+.toolbar-title-md{
+font-weight: normal !important;
+font-size: 18px !important;
+}
+.item-md {
+    font-size: 14px !important;
+    font-weight:400 !important;
+    color: #021c48 !important;
+}
+.scroll-content{
+/*background-color: cadetblue;*/
+overflow-x:initial !important;
+overflow-y:initial !important;
+}
+.swiper-scrollbar{
+display: none;
+}
+.next-button{
+padding: 0 4.6rem !important;
+border-radius: 8px !important;
+border-color: #072d42 !important;
+color: #333 !important;
+margin-left: 8vw;
+}
+.back-button{
+padding: 0 4.6rem !important;
+border-radius: 8px !important;
+border-color: #072d42 !important;
+color: #333 !important;
+}

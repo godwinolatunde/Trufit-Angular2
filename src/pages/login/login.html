@@ -1,0 +1,44 @@
+<ion-header>
+    <!--<ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Page One</ion-title>
+  </ion-navbar>-->
+</ion-header>
+
+<ion-content class="background">
+    <div class="row">
+        <div style="margin-top:40vh;margin-left: 20vw" class="col-xs-12">
+            <!-- <span style="color:#000;border:0px;margin: 0px;width:80%" class="input-label"></span> -->
+            <!-- <ion-input class="input-field" style="margin-left:0vw !important;width:75% !important" type="text" placeholder="Username" [(ngModel)]="loginData.username"></ion-input> -->
+            <ion-label color="primary" stacked>Username</ion-label>
+              <ion-input style="border-bottom:1px solid #333;width:150% !important;height:50% !important"type="text" placeholder="Username"> [ngmodel]='loginData.username'</ion-input>
+        </div>
+    </div>
+
+    <div class="row">
+        <div style="margin-top:0vh;margin-left: 20vw" class="col-xs-12">
+            <!-- <span style="color:#000;border:0px;margin: 0px;" class="input-label"></span> -->
+            <!-- <ion-input class="input-field" style="margin-left:0vw !important;width:75% !important" type="password" placeholder="Password" [(ngmodel)]="loginData.password"></ion-input> -->
+            <ion-label color="primary" stacked>Password</ion-label>
+              <ion-input style="border-bottom:1px solid #333;width:150% !important;height:50% !important"type="text" placeholder="Password">[ngmodel]='loginData.password'</ion-input>
+        </div>
+    </div>
+
+    <div style="width:20px;height:20px"></div>
+
+    <div class="row">
+        <div style="margin-top:5vh;border:0px" style="width:100%">
+            <!-- <a href="#/app/activity" class="btn btn-success btn-block" role="button">Login</a> -->
+            <button ion-button round type="submit" role="button" (click)='login()' style='background-color: #28a54c !important;display:block;margin: 0 auto'>
+          Sign in
+          </button>
+            <!-- <input type="submit" value="→ Login" /> -->
+
+            <p>
+                <u><a style="color: #000 !important;font-size:12px !important;display:block;text-align:center" (click)="register()">Not a user? Sign Up</a></u>
+            </p>
+        </div>
+    </div>
+</ion-content>
