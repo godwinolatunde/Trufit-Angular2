@@ -28,6 +28,7 @@ export class Activity {
       setInterval(()=>{
         if(status == 'start'){
           this.convertToTime(this.timed);
+          console.log()
         }
       }, 1000);
     }
