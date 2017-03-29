@@ -1,17 +1,31 @@
 import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
+import { Stepcounter } from 'ionic-native';
+
+let startingOffset = 0;
+Stepcounter.start(startingOffset).then(onSuccess => console.log('stepcounter-start success', onSuccess), onFailure => console.log('stepcounter-start error', onFailure));
+
+Stepcounter.getHistory().then(historyObj => console.log('stepcounter-history success', historyObj), onFailure => console.log('stepcounter-history error', onFailure));
 
 @Component({
   selector: 'page-activity',
   templateUrl: 'activity.html'
 })
 export class Activity {
-         timed = {'minute':0,'second':0};
+    timed = {'minute':0,'second':0};
   constructor(public navCtrl: NavController) {
   }
+  success(message) {
+        alert(message);
+    }
 
-  start;
+failure() {
+        alert("Error calling CordovaStepCounter Plugin");
+    }
+
+  // Distance = 0;
+  start = 0;
   status = 'start';
 
   convertToTime(time){
@@ -24,17 +38,19 @@ export class Activity {
  private play(){
     this.start++;
     status = 'start'
+    Stepcounter.start(startingOffset).then(onSuccess => console.log('stepcounter-start success', onSuccess), onFailure => console.log('stepcounter-start error', onFailure));
     if(this.start == 1){
       setInterval(()=>{
         if(status == 'start'){
           this.convertToTime(this.timed);
-          console.log()
+          this.timed.second++;
+          console.log(this.timed.second);
+
         }
       }, 1000);
     }
   }
   apply(){
-   this.timed.second++;
    }
   pause(){
     status = 'pause';
@@ -42,6 +58,28 @@ export class Activity {
 
   stop(){
     status = 'stop';
+    Stepcounter.stop();
     this.timed = {'minute':0,'second':0};
+  }
+   stepcount =46;
+        weight = 70;
+
+    //Step to Distance
+      stridelength = 2.3;   //avg stride length for people with 2.1 to 2.5ft
+      km = (3280/(this.stridelength));
+      
+      Distance = ((this.stepcount)/(this.km));
+
+    //Metabolic Burn Rate
+
+  burnrate(){
+      return(this.weight * 0.57 *2.2046226218)
+  }
+  
+  cal(){
+      console.log(this.timed);
+      let cak = ((this.burnrate()) * (this.Distance));
+      console.log(cak);
+       return  (cak);
   }
 }

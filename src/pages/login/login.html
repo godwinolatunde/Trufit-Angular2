@@ -9,20 +9,16 @@
 
 <ion-content class="background">
     <div class="row">
-        <div style="margin-top:40vh;margin-left: 20vw" class="col-xs-12">
-            <!-- <span style="color:#000;border:0px;margin: 0px;width:80%" class="input-label"></span> -->
-            <!-- <ion-input class="input-field" style="margin-left:0vw !important;width:75% !important" type="text" placeholder="Username" [(ngModel)]="loginData.username"></ion-input> -->
+        <div style="margin-top:40vh;padding:0vw 20vw;width:100%">
             <ion-label color="primary" stacked>Username</ion-label>
-              <ion-input style="border-bottom:1px solid #333;width:100% !important;height:50% !important"type="text" placeholder="Username"> [ngmodel]='loginData.username'</ion-input>
+            <ion-input style="border-bottom:1px solid #333;display:block;margin: 0 auto;height:50% !important" type="text" placeholder="Username"> [ngmodel]='this.loginData.username'</ion-input>
         </div>
     </div>
 
     <div class="row">
-        <div style="margin-top:0vh;margin-left: 20vw" class="col-xs-12">
-            <!-- <span style="color:#000;border:0px;margin: 0px;" class="input-label"></span> -->
-            <!-- <ion-input class="input-field" style="margin-left:0vw !important;width:75% !important" type="password" placeholder="Password" [(ngmodel)]="loginData.password"></ion-input> -->
+        <div style="margin-top:0vh;padding:0vw 20vw;width:100%">
             <ion-label color="primary" stacked>Password</ion-label>
-              <ion-input style="border-bottom:1px solid #333;width:100% !important;height:50% !important"type="text" placeholder="Password">[ngmodel]='loginData.password'</ion-input>
+            <ion-input style="border-bottom:1px solid #333;display:block;margin: 0 auto;height:50% !important" type="password" placeholder="Password">[ngmodel]='this.loginData.password'</ion-input>
         </div>
     </div>
 

@@ -6,7 +6,7 @@ import { Stepcounter } from 'ionic-native';
 import {Activity} from '../activity/activity';
 import {Register} from '../register/register';
 import {Http, Headers} from '@angular/http';
-// import {Storage} from '@ionic/storage';
+import {Storage} from '@ionic/storage';
 
 let startingOffset = 0;
 Stepcounter.start(startingOffset).then(onSuccess => console.log('stepcounter-start success', onSuccess), onFailure => console.log('stepcounter-start error', onFailure));
@@ -18,19 +18,21 @@ Stepcounter.getHistory().then(historyObj => console.log('stepcounter-history suc
          templateUrl: 'login.html'
 })
 export class Login {
-         loginData:{username:string, password:string};
-         constructor(public navCtrl: NavController, public http:Http,) {
+         loginData = {username:'', password:''};
+         constructor(public navCtrl: NavController, public http:Http, public storage:Storage) {
          }
 
 
          login(){
-                  let loginData = "username=" + this.loginData.username + " &password=" + this.loginData.password;
-                  // this.storage.set('username', this.loginData.username);
+             console.log(this.loginData.username)
+                  let loginParam = "username=" + this.loginData.username + " &password=" + this.loginData.password;
+                  this.storage.set('username', this.loginData.username);
+                  console.log(loginParam);
                   this.loginData.username="";
                   this.loginData.password="";
                   let headers = new Headers();
                   headers.append('Content-Type','application/x-www-form-urlencoded; charset=UTF-8')
-                  this.http.post('http://localhost/apis/login.php', this.loginData, {headers:headers} )
+                  this.http.post('http://localhost/apis/login.php', loginParam, {headers:headers} )
 
                   .subscribe((result)=> {
                            console.log(result)
@@ -39,14 +41,18 @@ export class Login {
                            setTimeout(()=> {
                            this.navCtrl.push(Activity);
                            }, 100);
-                           console.log()
-                  });
+                  },(error)=>{
+                      console.log(error);
+                  }
+                  );
+                  
 
          }
          register(){
-                  // setTimeout(()=> {
+                  setTimeout(()=> {
                   this.navCtrl.push(Register);
-                  // }, 100);
+                  }, 100);
                   console.log()
          }
+
 }
