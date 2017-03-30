@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
-
+import {FormsModule} from '@angular/forms';
 import { Activity } from '../pages/activity/activity';
 import { Overview } from '../pages/overview/overview';
 import { Login } from '../pages/login/login';

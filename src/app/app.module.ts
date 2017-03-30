@@ -2,6 +2,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { IonicStorageModule } from '@ionic/storage';
 import {FormsModule} from '@angular/forms';
+import { FORM_DIRECTIVES } from '@angular/forms';
 import { MyApp } from './app.component';
 import { Register } from '../pages/register/register';
 import { Activity } from '../pages/activity/activity';
@@ -19,6 +20,7 @@ import { Login } from '../pages/login/login';
   imports: [
     IonicModule.forRoot(MyApp),
     FormsModule,
+    // FORM_DIRECTIVES,
     IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],

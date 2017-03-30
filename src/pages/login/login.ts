@@ -4,6 +4,7 @@ import { NavController } from 'ionic-angular';
 // import { Router, ActivatedRoute } from '@angular/router';
 import { Stepcounter } from 'ionic-native';
 import { FormsModule } from '@angular/forms';
+// import { FORM_DIRECTIVES } from '@angular/forms';
 import {Activity} from '../activity/activity';
 import {Register} from '../register/register';
 import {Http, Headers} from '@angular/http';
@@ -16,7 +17,8 @@ Stepcounter.getHistory().then(historyObj => console.log('stepcounter-history suc
 
 @Component({
          selector: 'page-login',
-         templateUrl: 'login.html'
+         templateUrl: 'login.html',
+        //  directives: []
 })
 export class Login {
          loginData = {username:'', password:''};

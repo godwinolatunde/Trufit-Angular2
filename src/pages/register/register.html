@@ -10,34 +10,34 @@
 <ion-content class="fixed-content-green">
     <div style="margin-top:10vh;margin-left: 10vw">
         <ion-label color="white" stacked>Username</ion-label>
-        <ion-input style="border-bottom:1px solid #333;width:80% !important;height:50% !important" type="text" placeholder="Username"></ion-input>
+        <input style="border: 0px;border-top:0px;border-left:0px;border-right:0px;border-bottom:1px solid #333;display:block;height:100% !important;width:80%" type="text" placeholder="Username" [(ngModel)]="regData.username" [ngModelOptions]="{standalone: true}">
     </div>
-    <div style="margin-top:5vh;margin-left: 10vw">
+    <div style="margin-top:7vh;margin-left: 10vw">
         <ion-label color="white" stacked>Email</ion-label>
-        <ion-input style="border-bottom:1px solid #333;width:80% !important;height:50% !important" type="email" placeholder="me@domain.com"></ion-input>
+        <input style="border: 0px;border-top:0px;border-left:0px;border-right:0px;border-bottom:1px solid #333;display:block;height:100% !important;width:80%" type="email" placeholder="me@domain.com" [(ngModel)]="regData.email" [ngModelOptions]="{standalone: true}">
     </div>
-    <div style="margin-top:5vh;margin-left: 10vw">
+    <div style="margin-top:7vh;margin-left: 10vw">
         <ion-label stacked>Password</ion-label>
-        <ion-input style="border-bottom:1px solid #333;width:80% !important;height:50% !important" type="password" placeholder="**********"></ion-input>
+        <input style="border: 0px;border-top:0px;border-left:0px;border-right:0px;border-bottom:1px solid #333;display:block;height:100% !important;width:80%" type="password" placeholder="**********" [(ngModel)]="regData.password" [ngModelOptions]="{standalone: true}">
     </div>
-    <div style="margin-top:5vh;margin-left: 10vw">
+    <div style="margin-top:7vh;margin-left: 10vw">
         <ion-label stacked>Height(Cm)</ion-label>
-        <ion-input style="border-bottom:1px solid #333;width:80% !important;height:50% !important" type="number" placeholder="Height"></ion-input>
+        <input style="border: 0px;border-top:0px;border-left:0px;border-right:0px;border-bottom:1px solid #333;display:block;height:100% !important;width:80%" type="number" placeholder="Height" [(ngModel)]="regData.height" [ngModelOptions]="{standalone: true}">
     </div>
-    <div style="margin-top:5vh;margin-left: 10vw">
+    <div style="margin-top:7vh;margin-left: 10vw">
         <ion-label stacked>Weight(Kg)</ion-label>
-        <ion-input style="border-bottom:1px solid #333;width:80% !important;height:50% !important" type="number" placeholder="Weight"></ion-input>
+        <input style="border: 0px;border-top:0px;border-left:0px;border-right:0px;border-bottom:1px solid #333;display:block;height:100% !important;width:80%" type="number" placeholder="Weight" [(ngModel)]="regData.weight" [ngModelOptions]="{standalone: true}">
     </div>
-    <div style="margin-top:5vh;margin-left: 10vw">
+    <div style="margin-top:7vh;margin-left: 10vw">
         <ion-label stacked>Date of Birth</ion-label>
-        <ion-input style="border-bottom:1px solid #333;width:80% !important;height:50% !important" type="date" placeholder="dd/mm/yy"></ion-input>
+        <input style="border: 0px;border-top:0px;border-left:0px;border-right:0px;border-bottom:1px solid #333;display:block;height:100% !important;width:80%" type="date" placeholder="dd/mm/yy" [(ngModel)]="regData.age" [ngModelOptions]="{standalone: true}">
     </div>
-    <div style="width:20px;height:20px"></div>
+    <div style="width:40px;height:40px"></div>
     <div class="row">
-        <div style="display: inline-block !important;">
+        <div style="display: inline-block !important;margin-top: 10vh">
             <button (click)="loginpage()" ion-button round outline type="submit" class="back-button" style="display:block;float:left;width:60%;margin-left:10vw"><ion-icon name="arrow-dropleft"></ion-icon>&nbsp;Back</button>
         </div>
-        <div style="display: inline-block !important;">
+        <div style="display: inline-block !important;margin-top: 10vh">
             <button (click)="loginpage()" ion-button round outline type="submit" class="next-button" style="display:block;float:right;width:70%"> &nbsp;Next <ion-icon name="arrow-dropright"></ion-icon></button>
             <!--<button type="submit" class="next-button"> Next </button>-->
         </div>
