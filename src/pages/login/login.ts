@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 // import { Router, ActivatedRoute } from '@angular/router';
 import { Stepcounter } from 'ionic-native';
+import { FormsModule } from '@angular/forms';
 import {Activity} from '../activity/activity';
 import {Register} from '../register/register';
 import {Http, Headers} from '@angular/http';
@@ -24,7 +25,7 @@ export class Login {
 
 
          login(){
-             console.log(this.loginData.username)
+            //  console.log(this.loginData.username)
                   let loginParam = "username=" + this.loginData.username + " &password=" + this.loginData.password;
                   this.storage.set('username', this.loginData.username);
                   console.log(loginParam);
