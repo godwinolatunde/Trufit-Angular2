@@ -17,14 +17,14 @@ export class Register {
   }
   loginpage(){
 
-    let regData = "username=" + this.regData.username + " &email=" + this.regData.email + " &password=" + this.regData.password + " &height=" + this.regData.height + " &weight=" + this.regData.weight + " &age=" + this.regData.age;
+    let regDatas = "username=" + this.regData.username + " &email=" + this.regData.email + " &password=" + this.regData.password + " &height=" + this.regData.height + " &weight=" + this.regData.weight + " &age=" + this.regData.age;
                   this.storage.set('username', this.regData.username);
                   console.log(this.regData);
                   this.regData.username="";
                   this.regData.password="";
                   let headers = new Headers();
                   headers.append('Content-Type','application/x-www-form-urlencoded; charset=UTF-8')
-                  this.http.post('http://localhost/apis/signup.php', this.regData, {headers:headers} )
+                  this.http.post('http://localhost/apis/signup.php',regDatas, {headers:headers} )
 
                   .subscribe((result)=> {
                            

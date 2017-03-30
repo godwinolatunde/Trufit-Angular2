@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Stepcounter } from 'ionic-native';
 
+
 let startingOffset = 0;
 Stepcounter.start(startingOffset).then(onSuccess => console.log('stepcounter-start success', onSuccess), onFailure => console.log('stepcounter-start error', onFailure));
 
@@ -14,7 +15,7 @@ Stepcounter.getHistory().then(historyObj => console.log('stepcounter-history suc
 })
 export class Activity {
     timed = {'minute':0,'second':0};
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, private stepcounter: Stepcounter) {
   }
   success(message) {
         alert(message);
@@ -61,8 +62,8 @@ failure() {
     Stepcounter.stop();
     this.timed = {'minute':0,'second':0};
   }
-   stepcount =46;
-        weight = 70;
+   stepcount = 345;
+        weight = 76;
 
     //Step to Distance
       stridelength = 2.3;   //avg stride length for people with 2.1 to 2.5ft
