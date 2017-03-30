@@ -20,7 +20,7 @@ Stepcounter.getHistory().then(historyObj => console.log('stepcounter-history suc
 })
 export class Login {
          loginData = {username:'', password:''};
-         constructor(public navCtrl: NavController, public http:Http, public storage:Storage) {
+         constructor(public navCtrl: NavController, public http:Http, public storage:Storage, public formsmodule:FormsModule) {
          }
 
 
