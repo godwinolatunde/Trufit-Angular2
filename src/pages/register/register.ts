@@ -24,11 +24,12 @@ export class Register {
                   this.regData.password="";
                   let headers = new Headers();
                   headers.append('Content-Type','application/x-www-form-urlencoded; charset=UTF-8')
-                  this.http.post('http://localhost/apis/register.php', this.regData, {headers:headers} )
+                  this.http.post('http://localhost/apis/signup.php', this.regData, {headers:headers} )
 
                   .subscribe((result)=> {
-                           console.log(result)
-                           //  this.storage.set('user', result.data.data);
+                           
+                            this.storage.set('user', result);
+                            console.log(result);
                            //  this.storage.set.token = result.data.data.token;
                            setTimeout(()=> {
                            this.navCtrl.push(Login);
