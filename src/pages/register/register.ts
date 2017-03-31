@@ -20,14 +20,14 @@ export class Register {
     let regDatas = "username=" + this.regData.username + " &email=" + this.regData.email + " &password=" + this.regData.password + " &height=" + this.regData.height + " &weight=" + this.regData.weight + " &age=" + this.regData.age;
                   this.storage.set('username', this.regData.username);
                   console.log(this.regData);
-                  this.regData.username="";
-                  this.regData.password="";
+                  // this.regData.username="";
+                  // this.regData.password="";
                   let headers = new Headers();
                   headers.append('Content-Type','application/x-www-form-urlencoded; charset=UTF-8')
                   this.http.post('http://localhost/apis/signup.php',regDatas, {headers:headers} )
 
                   .subscribe((result)=> {
-                           
+
                             this.storage.set('user', result);
                             console.log(result);
                            //  this.storage.set.token = result.data.data.token;
@@ -38,5 +38,10 @@ export class Register {
                       console.log(error);
                   }
                   );
+  }
+  page(){
+           setTimeout(()=> {
+           this.navCtrl.push(Login);
+           }, 100);
   }
   }
