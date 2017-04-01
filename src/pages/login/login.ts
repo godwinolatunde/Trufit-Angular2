@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
-
 import { NavController } from 'ionic-angular';
-// import { Router, ActivatedRoute } from '@angular/router';
 import { Stepcounter } from 'ionic-native';
 import { FormsModule } from '@angular/forms';
-// import { FORM_DIRECTIVES } from '@angular/forms';
 import {Activity} from '../activity/activity';
 import {Register} from '../register/register';
 import {Http, Headers} from '@angular/http';
