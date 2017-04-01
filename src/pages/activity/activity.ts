@@ -61,14 +61,14 @@ failure() {
     Stepcounter.stop();
     this.timed = {'minute':0,'second':0};
   }
-   stepcount = 34;
+   stepcount:any =Stepcounter.getStepCount;
         weight = 76;
 
     //Step to Distance
       stridelength = 2.3;   //avg stride length for people with 2.1 to 2.5ft
       km = (3280/(this.stridelength));
       
-      distance:any = ((this.stepcount)/(this.km));
+      distance:number = ((this.stepcount)/(this.km));
 
     //Metabolic Burn Rate
 
@@ -78,7 +78,7 @@ failure() {
   
   cal(){
       console.log(this.timed);
-      let cak = ((this.burnrate()) * (this.distance));
+      let cak:number = ((this.burnrate()) * (this.distance));
       console.log(cak);
        return  (cak);
   }

@@ -30,6 +30,10 @@ import { Login } from '../pages/login/login';
     Overview,
     Login
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [
+    {provide: ErrorHandler, useClass: IonicErrorHandler,},
+    Stepcounter
+    // {provide: Stepcounter, useClass: startingOffset}
+  ]
 })
 export class AppModule {}

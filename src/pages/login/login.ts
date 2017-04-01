@@ -7,10 +7,10 @@ import {Register} from '../register/register';
 import {Http, Headers} from '@angular/http';
 import {Storage} from '@ionic/storage';
 
-let startingOffset = 0;
-Stepcounter.start(startingOffset).then(onSuccess => console.log('stepcounter-start success', onSuccess), onFailure => console.log('stepcounter-start error', onFailure));
+// let startingOffset = 0;
+// Stepcounter.start(startingOffset).then(onSuccess => console.log('stepcounter-start success', onSuccess), onFailure => console.log('stepcounter-start error', onFailure));
 
-Stepcounter.getHistory().then(historyObj => console.log('stepcounter-history success', historyObj), onFailure => console.log('stepcounter-history error', onFailure));
+// Stepcounter.getHistory().then(historyObj => console.log('stepcounter-history success', historyObj), onFailure => console.log('stepcounter-history error', onFailure));
 
 @Component({
          selector: 'page-login',
