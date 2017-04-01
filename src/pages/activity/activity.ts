@@ -15,7 +15,7 @@ Stepcounter.getHistory().then(historyObj => console.log('stepcounter-history suc
 })
 export class Activity {
     timed = {'minute':0,'second':0};
-  constructor(public navCtrl: NavController, private stepcounter: Stepcounter) {
+  constructor(public navCtrl: NavController, public stepcounter: Stepcounter) {
   }
   success(message) {
         alert(message);
@@ -25,7 +25,6 @@ failure() {
         alert("Error calling CordovaStepCounter Plugin");
     }
 
-  // Distance = 0;
   start = 0;
   status = 'start';
 
@@ -62,14 +61,14 @@ failure() {
     Stepcounter.stop();
     this.timed = {'minute':0,'second':0};
   }
-   stepcount = 345;
+   stepcount = 34;
         weight = 76;
 
     //Step to Distance
       stridelength = 2.3;   //avg stride length for people with 2.1 to 2.5ft
       km = (3280/(this.stridelength));
       
-      Distance = ((this.stepcount)/(this.km));
+      distance:any = ((this.stepcount)/(this.km));
 
     //Metabolic Burn Rate
 
@@ -79,7 +78,7 @@ failure() {
   
   cal(){
       console.log(this.timed);
-      let cak = ((this.burnrate()) * (this.Distance));
+      let cak = ((this.burnrate()) * (this.distance));
       console.log(cak);
        return  (cak);
   }
