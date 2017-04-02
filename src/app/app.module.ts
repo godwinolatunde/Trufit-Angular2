@@ -8,6 +8,9 @@ import { Register } from '../pages/register/register';
 import { Activity } from '../pages/activity/activity';
 import { Overview } from '../pages/overview/overview';
 import { Login } from '../pages/login/login';
+import {CORE_DIRECTIVES, FORM_DIRECTIVES} from 'angular2/angular2';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/toPromise';
 
 @NgModule({
   declarations: [

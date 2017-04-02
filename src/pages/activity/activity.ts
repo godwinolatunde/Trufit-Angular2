@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import{Login} from '../login/login';
 import { NavController } from 'ionic-angular';
 import { Stepcounter } from 'ionic-native';
 
@@ -82,4 +82,11 @@ failure() {
       console.log(cak);
        return  (cak);
   }
-}
+  out(){
+        localStorage.removeItem('token')
+        console.log(localStorage);
+            setTimeout(()=> {
+           this.navCtrl.setRoot(Login);
+           }, 100);
+  }
+  }
