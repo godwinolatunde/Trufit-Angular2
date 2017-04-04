@@ -41,11 +41,15 @@ export class Login {
 
                   .subscribe((result)=> {
                       if(result.status == "success"){
-                        console.log(result.data.token)
+                        // console.log(result.data.token)
                             this.storage.set('user', result.data);
                             this.storage.set('token', result.data.token);
-                            localStorage.setItem('user', result.data);
+                            localStorage.setItem('user', JSON.stringify(result.data));
                             localStorage.setItem('token', result.data.token)
+                            localStorage.setItem('weight', result.data.weight)
+                            var user = JSON.parse(localStorage.getItem('user')) 
+                            console.log(user.id)
+                            console.log(localStorage.getItem('token'))
                             // this.storage.set = (this.data.token);
                            setTimeout(()=> {
                            this.navCtrl.setRoot(Activity);
